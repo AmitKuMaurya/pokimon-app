@@ -1,0 +1,8 @@
+.ocean{
+    display: grid;
+    grid-template-columns: 18vw 76vw;
+    grid-template-rows: auto auto;
+    gap: 3vw;
+    margin: auto;
+    /* border: 3px solid red; */
+}
