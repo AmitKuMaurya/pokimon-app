@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box {
+    height: 100vh;  
+    width: 18vw;
+    background-color: #f6fafc;
+}
+
+.box > div:first-child {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box > div:first-child > img {
+    cursor: pointer;
+}
+
+.box > div{
+    width: 18vw;
+}
+
+.bar-ele > div{
+    width: 16vw auto;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bar-ele > div:hover {
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #4caeff;
+}
+
+.bar-ele > div > h1  {
+    padding: 4% 4%;
+    width: 4vw;
+    display: flex;
+    justify-content: right;
+}
+
+.bar-ele > div > p  {
+    padding: 5% 5%;
+    width: 13vw;
+}
+
