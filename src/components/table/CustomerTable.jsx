@@ -115,7 +115,7 @@ const CustomerTable = () => {
       <div className="heading">Consumers Overview</div>
       <div className="customer-nav">
         <div>
-          <input type="text" name="" id="" placeholder="Search Ex:(Rewards)" />
+          <input type="text" name="" id="" placeholder="Search Customer Name" />
           <h1>
             <CiSearch />
           </h1>
