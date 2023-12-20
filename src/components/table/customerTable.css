@@ -8,3 +8,50 @@
     font-size: 13px;
     font-weight: 500;
 }
+
+.ant-pagination {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+.customer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-bottom: 2vh;
+}
+
+.customer-nav > div:nth-child(1) {
+    display: flex;
+    /* justify-content: left; */
+    /* border: 1px solid red; */
+}
+
+.customer-nav > div:nth-child(1) > input {
+    width: 20vw;
+    padding: 0px 12px;
+    cursor: pointer;
+    outline-style: none;
+}
+
+.customer-nav > div:nth-child(1) > h1 {
+    margin-top: 1%;
+    margin-left: -10%;
+}
+
+.customer-nav > div:nth-child(2) {
+    width: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+}
+
+.heading {
+    font-weight: 600;
+    color: black;
+    font-size: larger;
+}

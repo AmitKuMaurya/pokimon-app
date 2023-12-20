@@ -91,12 +91,14 @@
 }
 
 .search-box>input {
-    /* position: relative; */
-    outline-color: grey;
     padding: 0px 6%;
     border-radius: 30px;
     width: 18vw;
-    height: 6vh;
+    height: 5vh;
+    background-color: #f6fafc;
+    border: 0px solid;
+    color: #CCC;
+
 }
 
 .search-box>h1 {
