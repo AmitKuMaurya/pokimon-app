@@ -1,6 +1,6 @@
 import React from "react";
 import "./dashboard.css";
-import { data, data2, options } from "../../constants/chat.data";
+import { data, data2, options,horizontal_data, horizontal_options } from "../../constants/chart.data";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -63,9 +63,13 @@ const Dashboard = () => {
 
           {/* first -third */}
           <div>
-            <h3>Consumer Analysis</h3>
+            <h3 >Consumer Analysis</h3>
             <div>
-                <div></div>
+                <div>
+                  <p>Activity</p>
+                  <p>Stock</p>
+                  <p>Volume</p>
+                </div>
                 <div>
                   <button>Past Weeks</button>
                   <button>Past Months</button>
@@ -73,7 +77,7 @@ const Dashboard = () => {
                   <button>All Time</button>
                 </div>
             </div>
-            <div></div>
+            <Bar options={horizontal_options} data={horizontal_data} />
           </div>
         </div>
         {/* second */}

@@ -49,13 +49,13 @@ export const Navbar = () => {
           {/* third sub box */}
           <div>
             <div>
-              <div>Buy: ₹ 73900.00</div>
+              <div>Buy: ₹ 73,900.00</div>
               <div>
                 <img src={Up_Graph} alt="graph" />
               </div>
             </div>
             <div>
-              <div>Sell: ₹ 70900.00</div>
+              <div>Sell: ₹ 70,900.00</div>
               <img src={Up_Graph} alt="up graph" />
             </div>
           </div>

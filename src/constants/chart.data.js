@@ -45,3 +45,47 @@ export const options = {
       },
     ],
   };
+
+
+  // horizontal chART
+
+
+  export const horizontal_options = {
+    indexAxis: "y",
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+    title: {
+      display: false,
+      text: "General SMS - 150",
+    },
+      layout: {
+        padding: 50
+      },
+      datalabels: {
+        font: {
+          weight: "bold"
+        },
+        align: "end",
+        anchor: "end"
+      }
+    }
+  };
+  
+  
+  export const horizontal_data = {
+    labels: ["Very Active", "Moderatively Active", "Least Active"],
+    datasets: [
+      {
+        data: [60, 30, 73],
+        backgroundColor: ["#54abe5", "#54abe5", "#54abe5"],
+      },
+    ],
+  };

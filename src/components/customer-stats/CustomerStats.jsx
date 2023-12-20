@@ -31,7 +31,7 @@ const CustomerStats = () => {
             <p>You have 134 Customer this week.</p>
 
             <button>
-            <Link to={'/customers'}>
+            <Link style={{color :"white", textDecoration : "none"}} to={'/customers'}>
               {" "}
               <IoPeople /> Add Customers
             </Link>

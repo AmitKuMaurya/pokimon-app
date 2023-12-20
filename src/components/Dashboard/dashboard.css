@@ -5,11 +5,11 @@
     gap: 1vw;
     grid-row: auto auto;
 }
-.dashboard > div:nth-child(1){
-    border: 1px solid red;
-}
+
 .dashboard > div:nth-child(1)> div:nth-child(1) > img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    border: 10px;
     width: 100%;
 } 
 .dashboard > div:nth-child(1)> div:nth-child(2) {
@@ -20,7 +20,7 @@
 .dashboard > div:nth-child(1)> div:nth-child(2) > div {
     display: flex;
     flex-direction: column;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
 }
 
 .dashboard > div:nth-child(1)> div:nth-child(2) > div > div > img {
@@ -63,6 +63,54 @@
     background-color: white;
     padding: 0.3rem 0.6rem;
 }
+
+.dashboard > div:nth-child(1)> div:nth-child(3) {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.dashboard > div:nth-child(1)> div:nth-child(3) > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2vh;
+    padding: 2% 2%;
+}
+
+.dashboard > div:nth-child(1)> div:nth-child(3) > div > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    gap: 8%;
+    margin-top: 3%;
+    border-bottom: 1px solid gainsboro;
+    
+}
+.dashboard > div:nth-child(1)> div:nth-child(3) > div > div:nth-child(2) {
+    /* width: -15vw; */
+    /* margin-left: 1%; */
+    display: flex;
+    /* flex-direction: row; */
+    gap: 4%;
+}
+.dashboard > div:nth-child(1)> div:nth-child(3) > h3 {
+    padding: 0% 0% 0% 2%;
+}
+.dashboard > div:nth-child(1)> div:nth-child(3) > div > div:nth-child(2) > button {
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    background-color: white;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-size: 12px;
+    margin-bottom: 2%;
+}
+
+.dashboard > div:nth-child(1)> div:nth-child(3) > div > div:nth-child(2) > button:hover {
+    transition: 0.5s all;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
 .dashboard > div:nth-child(2){
     /* border: 1px solid red; */
     display: flex;
@@ -70,8 +118,9 @@
     gap: 2vh;
 }
 .dashboard > div:nth-child(2) > div{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding: 3% 3%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     border-radius: 2%;
 }
 .dashboard > div:nth-child(2) > div > div:nth-child(1) {
@@ -94,7 +143,7 @@
 
 .dashboard > div:nth-child(2) > div > div:nth-child(2) > button{
     border: 1px solid black;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     padding: 0.3rem 0.6rem;
     background-color: white;
