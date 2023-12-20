@@ -1,0 +1,111 @@
+.dashboard {
+    display: grid;
+    height: 66vh;
+    grid-template-columns: 44vw 30vw;
+    gap: 1vw;
+    grid-row: auto auto;
+}
+.dashboard > div:nth-child(1){
+    border: 1px solid red;
+}
+.dashboard > div:nth-child(1)> div:nth-child(1) > img {
+    border: 1px solid red;
+    width: 100%;
+} 
+.dashboard > div:nth-child(1)> div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard > div:nth-child(1)> div:nth-child(2) > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted red;
+}
+
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div > img {
+    width: 100%;
+}
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div:nth-child(1) {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1% 1%;
+}
+
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div:nth-child(1)> div:nth-child(1) {
+    margin-right: 8%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    /* border: 1px dotted red; */
+    /* justify-content: space-between; */
+    
+}
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div:nth-child(1)> div:nth-child(1) > p {
+    /* display: flex; */
+    /* flex-direction: column; */
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div:nth-child(1) > div:nth-child(2) > img {
+    width: 85%;
+}
+
+.dashboard > div:nth-child(1)> div:nth-child(2) > div > div:nth-child(1)> div:nth-child(1) > button {
+    color: black;
+    font-size: x-small;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: white;
+    padding: 0.3rem 0.6rem;
+}
+.dashboard > div:nth-child(2){
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.dashboard > div:nth-child(2) > div{
+    border: 1px solid green;
+    padding: 3% 3%;
+    border-radius: 2%;
+}
+.dashboard > div:nth-child(2) > div > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard > div:nth-child(2) > div > div:nth-child(1) > p {
+    font-size: large;
+}
+
+.dashboard > div:nth-child(2) > div > div:nth-child(1) > button{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 0.4rem 1rem;
+    background-color: white;
+}
+
+.dashboard > div:nth-child(2) > div > div:nth-child(2) > button{
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    background-color: white;
+    margin-top: 1%;
+    margin-left: 1%;
+    font-size: 12px;
+    margin-bottom: 2%;
+}
+.dashboard > div:nth-child(2) > div > div:nth-child(2) > button:hover{
+    transition: 0.5s all;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
