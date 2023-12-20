@@ -5,6 +5,7 @@ import TICKET_IMG from "../../assets/c3.png";
 import Tech_Life from "../../assets/Tech_Life.png";
 import { IoPeople } from "react-icons/io5";
 import "./customer-stats.css";
+import { Link } from "react-router-dom";
 const CustomerStats = () => {
   const CustomerStats = [
     {
@@ -30,8 +31,10 @@ const CustomerStats = () => {
             <p>You have 134 Customer this week.</p>
 
             <button>
+            <Link to={'/customers'}>
               {" "}
               <IoPeople /> Add Customers
+            </Link>
             </button>
           </div>
           <div>

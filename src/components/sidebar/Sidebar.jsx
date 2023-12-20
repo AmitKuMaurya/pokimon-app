@@ -10,6 +10,7 @@ import { FaQuestion } from "react-icons/fa6";
 import { IoIosSettings } from "react-icons/io";
 import Logo from '../../assets/zintlr.png';
 import "./sidebar.css";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   const SideBarContent = [
@@ -54,7 +55,9 @@ export const Sidebar = () => {
   return (
     <div className="box">
         <div>
+            <Link to={"/"}>
             <img src={Logo} alt="logo image" />
+          </Link>
         </div>
       {SideBarContent.map((ele) => {
         return (

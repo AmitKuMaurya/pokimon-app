@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="search-box">
-        <input type="text" name="" id="" placeholder="Search Ex:(Rewards)" />
+          <input type="text" name="" id="" placeholder="Search Ex:(Rewards)" />
         <h1>
           <CiSearch />
         </h1>

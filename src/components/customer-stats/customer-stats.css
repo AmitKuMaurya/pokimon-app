@@ -1,5 +1,6 @@
 .customer {
     display: grid;
+    /* float: right; */
     max-width: 75vw;
     grid-template-columns: 25vw 48vw;
     grid-template-rows: auto auto;
