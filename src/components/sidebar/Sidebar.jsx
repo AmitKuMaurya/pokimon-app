@@ -63,7 +63,7 @@ export const Sidebar = () => {
         return (
           <div className="bar-ele" key={Math.random() * 10}>
             <div>
-              <h1>{ele.icon}</h1>
+              <h3>{ele.icon}</h3>
                <p>{ele.tag}</p>
             </div>
           </div>

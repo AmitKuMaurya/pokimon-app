@@ -6,3 +6,11 @@
     margin: auto;
     /* border: 3px solid red; */
 }
+
+@font-face {
+    font-family: karla;
+    src: url(../public//Karla-Regular.ttf);
+}
+.ocean{
+    font-family: karla;
+}

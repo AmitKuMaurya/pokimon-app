@@ -33,7 +33,7 @@ const CustomerStats = () => {
             <button>
             <Link style={{color :"white", textDecoration : "none"}} to={'/customers'}>
               {" "}
-              <IoPeople /> Add Customers
+              <IoPeople /> View Customers
             </Link>
             </button>
           </div>
