@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Space, Table, Tag, Select } from "antd";
 import { LiaArrowRightSolid } from "react-icons/lia";
 import "./customerTable.css";
@@ -6,6 +6,9 @@ import { TableData } from "../../constants/table.data";
 import { CiSearch } from "react-icons/ci";
 
 const CustomerTable = () => {
+
+  const [search,setSearch] = useState(TableData);
+
   const columns = [
     {
       title: "Customer Name",
@@ -110,12 +113,16 @@ const CustomerTable = () => {
   const filterOption = (input, option) =>
     (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
 
+  const SearchByName = (event) => {
+    setSearch(TableData.filter(f => f.name.toLocaleLowerCase().includes(event.target.value)))
+  }
+
   return (
     <>
       <div className="heading">Consumers Overview</div>
       <div className="customer-nav">
         <div>
-          <input type="text" name="" id="" placeholder="Search Customer Name" />
+          <input type="text" name="" id="" onChange={SearchByName} placeholder="Search Customer Name" />
           <h1>
             <CiSearch />
           </h1>
@@ -158,11 +165,11 @@ const CustomerTable = () => {
             filterOption={filterOption}
             options={[
               {
-                value: "name",
+                value: "AtoZ",
                 label: "Sort By Name A - Z",
               },
               {
-                value: "name",
+                value: "ZtoA",
                 label: "Sort By Name Z- A",
               },
               {
@@ -180,7 +187,7 @@ const CustomerTable = () => {
       <Table
         columns={columns}
         pagination={{ pageSize: 4 }}
-        dataSource={TableData}
+        dataSource={search}
       />
     </>
   );
