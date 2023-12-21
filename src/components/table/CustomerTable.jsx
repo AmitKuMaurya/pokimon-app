@@ -6,9 +6,8 @@ import { TableData } from "../../constants/table.data";
 import { CiSearch } from "react-icons/ci";
 
 const CustomerTable = () => {
-
-  const [search,setSearch] = useState(TableData);
-  console.log('search: ', search);
+  const [search, setSearch] = useState(TableData);
+  console.log("search: ", search);
 
   const columns = [
     {
@@ -105,21 +104,47 @@ const CustomerTable = () => {
 
   const onChangeFilter = (value) => {
     console.log(`onChangeFilter: ${value}`);
-    setSearch(search.filter(f => f.zone.toLocaleLowerCase().includes(value)));
+    setSearch(search.filter((f) => f.zone.toLocaleLowerCase().includes(value)));
   };
-  
 
+  const onChangeSort = (value) => {
+    console.log(`onChangeSort: ${value}`);
+
+    if (value === "AtoZ") {
+      setSearch(search.slice().sort((a, b) => a.name.localeCompare(b.name)));
+    } else if (value === "ZtoA") {
+      setSearch(search.slice().sort((a, b) => b.name.localeCompare(a.name)));
+    } else if (value === "asc") {
+      setSearch(search.slice().sort((a, b) => a.revenue.localeCompare(b.name)));
+    } else if (value === "desc") {
+      setSearch(
+        search.slice().sort((a, b) => b.revenue.localeCompare(a.revenue))
+      );
+    } else {
+      return true;
+    }
+  };
 
   const SearchByName = (event) => {
-    setSearch(search.filter(f => f.name.toLocaleLowerCase().includes(event.target.value)))
-  }
+    setSearch(
+      search.filter((f) =>
+        f.name.toLocaleLowerCase().includes(event.target.value)
+      )
+    );
+  };
 
   return (
     <>
       <div className="heading">Consumers Overview</div>
       <div className="customer-nav">
         <div>
-          <input type="text" name="" id="" onChange={SearchByName} placeholder="Search Customer Name" />
+          <input
+            type="text"
+            name=""
+            id=""
+            onChange={SearchByName}
+            placeholder="Search Customer Name"
+          />
           <h1>
             <CiSearch />
           </h1>
@@ -154,10 +179,7 @@ const CustomerTable = () => {
           <Select
             showSearch
             placeholder="Sort By Name or Revenue"
-            // optionFilterProp="children"
-            // onChange={onChangeSort}
-            // onSearch={onSearch}
-            // filterOption={filterOption}
+            onChange={onChangeSort}
             options={[
               {
                 value: "AtoZ",
