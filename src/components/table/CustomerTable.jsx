@@ -8,6 +8,7 @@ import { CiSearch } from "react-icons/ci";
 const CustomerTable = () => {
 
   const [search,setSearch] = useState(TableData);
+  console.log('search: ', search);
 
   const columns = [
     {
@@ -102,19 +103,15 @@ const CustomerTable = () => {
     },
   ];
 
-  const onChange = (value) => {
-    console.log(`selected ${value}`);
+  const onChangeFilter = (value) => {
+    console.log(`onChangeFilter: ${value}`);
+    setSearch(search.filter(f => f.zone.toLocaleLowerCase().includes(value)));
   };
-  //   const onSearch = (value) => {
-  //     console.log('search:', value);
-  //   };
+  
 
-  // Filter `option.label` match the user type `input`
-  const filterOption = (input, option) =>
-    (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
 
   const SearchByName = (event) => {
-    setSearch(TableData.filter(f => f.name.toLocaleLowerCase().includes(event.target.value)))
+    setSearch(search.filter(f => f.name.toLocaleLowerCase().includes(event.target.value)))
   }
 
   return (
@@ -132,10 +129,8 @@ const CustomerTable = () => {
           <Select
             showSearch
             placeholder="Filter By Zone or KYC Status"
-            // optionFilterProp="children"
-            onChange={onChange}
-            // onSearch={onSearch}
-            filterOption={filterOption}
+            optionFilterProp="children"
+            onChange={onChangeFilter}
             options={[
               {
                 value: "east",
@@ -160,9 +155,9 @@ const CustomerTable = () => {
             showSearch
             placeholder="Sort By Name or Revenue"
             // optionFilterProp="children"
-            onChange={onChange}
+            // onChange={onChangeSort}
             // onSearch={onSearch}
-            filterOption={filterOption}
+            // filterOption={filterOption}
             options={[
               {
                 value: "AtoZ",
